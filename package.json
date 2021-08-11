@@ -1,7 +1,7 @@
 {
-  "name": "@vant/weapp",
-  "version": "1.8.0",
-  "author": "youzan",
+  "name": "photon-h5-ui",
+  "version": "1.0.0",
+  "author": "PhotonPay",
   "license": "MIT",
   "miniprogram": "lib",
   "description": "轻量、可靠的小程序 UI 组件库",
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/youzan/vant-weapp.git"
+    "url": "https://github.com/weitianhao/photon-h5-ui.git"
   },
   "lint-staged": {
     "*.{ts,js}": [
@@ -37,7 +37,6 @@
       "prettier --write"
     ]
   },
-  "homepage": "https://github.com/youzan/vant-weapp#readme",
   "devDependencies": {
     "@vant/cli": "^3.11.2",
     "@vant/icons": "^1.6.0",

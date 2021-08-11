@@ -2,21 +2,11 @@
 var object = require('./object.wxs');
 var array = require('./array.wxs');
 
-function kebabCase(word) {
-  var newWord = word
-    .replace(getRegExp("[A-Z]", 'g'), function (i) {
-      return '-' + i;
-    })
-    .toLowerCase()
-
-  return newWord;
-}
-
 function style(styles) {
   if (array.isArray(styles)) {
     return styles
       .filter(function (item) {
-        return item != null && item !== '';
+        return item != null;
       })
       .map(function (item) {
         return style(item);
@@ -28,10 +18,10 @@ function style(styles) {
     return object
       .keys(styles)
       .filter(function (key) {
-        return styles[key] != null && styles[key] !== '';
+        return styles[key] != null;
       })
       .map(function (key) {
-        return [kebabCase(key), [styles[key]]].join(':');
+        return [key, [styles[key]]].join(':');
       })
       .join(';');
   }
